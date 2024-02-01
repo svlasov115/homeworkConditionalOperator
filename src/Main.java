@@ -80,8 +80,17 @@ public class Main {
         // Задача 7;
         System.out.println("Задача 7");
 
-        int one;
-        int two;
-        int three;
+        int one = 174;
+        int two = 777;
+        int three = 774;
+
+        if (one > two && one > three) {
+            System.out.println("Число " + one + " большее.");
+        }
+        if (two > one && two > three) {
+            System.out.println("Число " + two + " большее.");
+        } else {
+            System.out.println("Число " + three + " большее.");
+        }
     }
 }
