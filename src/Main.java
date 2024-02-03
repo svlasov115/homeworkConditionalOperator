@@ -36,16 +36,19 @@ public class Main {
         // Задача 4;
         System.out.println("Задача 4");
 
-        int age2 = 25;
+        age = 25;
 
-        if (age2 >= 2 && age2 <= 6) {
-            System.out.println("Если возраст человека равен " + age2 + ", то ему нужно ходить в детский сад.");
+        if (age >= 2 && age <= 6) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в детский сад.");
         }
-        if (age2 >= 7 && age2 <= 17) {
-            System.out.println("Если возраст человека равен " + age2 + ", то ему нужно ходить в школу.");
+        if (age >= 7 && age <= 17) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в школу.");
         }
-        if (age2 > 24) {
-            System.out.println("Если возраст человека равен " + age2 + ", то ему нужно ходить на работу.");
+        if (age >= 18 && age <= 24) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить в университет.");
+        }
+        if (age > 24) {
+            System.out.println("Если возраст человека равен " + age + ", то ему нужно ходить на работу.");
         }
 
         // Задача 5;
@@ -67,11 +70,18 @@ public class Main {
         System.out.println("Задача 6");
 
         int railwayСarriageCapacity = 102;
+        int quantityOfSeats = 60;
+        int quantityOfStandingPlaces = railwayСarriageCapacity - quantityOfSeats;
+        int quantityOfOccupiedSeats = 26;
+        int quantityOfOccupiedStandingPlaces = 33;
 
-        if (railwayСarriageCapacity < 102) {
+        if (quantityOfOccupiedSeats + quantityOfOccupiedStandingPlaces < railwayСarriageCapacity) {
             System.out.println("В вагоне есть место.");
         }
-        if (railwayСarriageCapacity < 60) {
+        if (quantityOfOccupiedStandingPlaces < quantityOfStandingPlaces) {
+            System.out.println("В вагоне есть стоячее место.");
+        }
+        if (quantityOfOccupiedSeats < quantityOfSeats) {
             System.out.println("В вагоне есть сидячее место.");
         } else {
             System.out.println("Вагон уже полностью забит.");
@@ -83,14 +93,17 @@ public class Main {
         int one = 174;
         int two = 777;
         int three = 774;
+        int max;
 
-        if (one > two && one > three) {
-            System.out.println("Число " + one + " большее.");
+        if (two >= three) {
+            max = two;
         }
-        if (two > one && two > three) {
-            System.out.println("Число " + two + " большее.");
-        } else {
-            System.out.println("Число " + three + " большее.");
+        else {
+            max = three;
         }
+        if (one >= max) {
+            max = one;
+        }
+        System.out.println("Самое большее число — это число " + max + ".");
     }
 }
